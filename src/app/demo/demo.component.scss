@@ -1,0 +1,132 @@
+$line: rgb(230, 230, 230);
+$color:#f35626;
+.container {
+  position: relative;
+  top: 100%;
+	min-height: 100%;
+		
+
+
+  .wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		
+		text-align: center;
+		color: #7b8993;
+		a {
+			color: inherit;
+			text-decoration: underline;
+			&:hover {
+				color: $color;
+			}
+		}
+		hr {
+			border: none;
+			height: 1px;
+			background-color: $line;
+			background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+			width: 450px;
+		}
+  }
+}
+
+/* 
+.container:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+} */
+
+.container-animation {
+  overflow: hidden;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 3px 0px 39px 0px;
+  /*   border-top: 1px solid $line;
+  border-bottom: 1px solid $line; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.demoElement {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+  color: $color;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100; //background: $line;
+}
+
+.form {
+  text-align: center;
+}
+
+button,
+select {
+  padding: .75rem;
+  margin: .375rem;
+  background-color: transparent;
+}
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  .arrows {
+    position: absolute;
+    right: 16px;
+		top: 22px;
+		:before,
+		:after, 
+    /* .arrow-up,
+    .arrow-down */ {
+			content: " ";
+			width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      position: absolute;
+      right: 0;
+		}
+		:before
+		//.arrow-up 
+		{
+      border-top: 4px solid grey;
+      top: 10px;
+		}
+		:after
+		//.arrow-down 
+		{
+      border-bottom: 4px solid grey;
+      top: 0;
+		}
+  }
+}
+
+button {
+  border: 2px solid $color;
+  line-height: 1.375;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 700;
+  color: $color;
+  cursor: pointer;
+}
+
+select {
+  border: 1px solid $line;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  color: inherit;
+}

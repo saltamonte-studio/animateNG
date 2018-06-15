@@ -1,2 +1,0 @@
-# animateNG
-Angular Library / animations
