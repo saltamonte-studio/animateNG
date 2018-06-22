@@ -4,13 +4,14 @@ import {
 	style,
 	animate,
 	transition,
-	keyframes
+	keyframes,
+	AnimationMetadata
 } from "@angular/animations";
 
 
+export const AnimateGallery =  (timing: string): AnimationMetadata[] => [
 
-
-export const AnimateGallery = trigger("animateGallery", [
+//export const AnimateGallery = trigger("animateGallery", [
 	state("slideInLeft", style({ display: 'block', opacity: '1', transform: 'translate(0, 0)' })),
 	state("slideOutLeft", style({ display: 'none', opacity: '0', transform: 'translate(-100% 0)' })),
 	state("slideInRight", style({ display: 'block', opacity: '1', transform: 'translate(0, 0)' })),
@@ -33,7 +34,7 @@ export const AnimateGallery = trigger("animateGallery", [
 	state("buzz", style({ display: 'block', opacity: '1', transform: 'rotateZ(0) translate(0, 0)' })),
 	
 	transition('* => slideInLeft, void => slideInLeft', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '0', transform: 'translate(-100%, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 1 })
@@ -41,7 +42,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideOutLeft, void => slideOutLeft', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '0', transform: 'translate(-100%, 0)', offset: 1 }),
@@ -49,7 +50,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideInRight, void => slideInRight', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '0', transform: 'translate(100%, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 1 })
@@ -57,7 +58,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideOutRight, void => slideOutRight', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '0', transform: 'translate(100%, 0)', offset: 1 }),
@@ -65,7 +66,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideInUp, void => slideInUp', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '0', transform: 'translate(0, -100%)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 1 })
@@ -73,7 +74,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideOutUp, void => slideOutUp', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '0', transform: 'translate(0, -100%)', offset: 1 }),
@@ -81,7 +82,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideInDown, void => slideInDown', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '0', transform: 'translate(0, 100%)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 1 })
@@ -89,7 +90,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => slideOutDown, void => slideOutDown', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '0', transform: 'translate(0, 100%)', offset: 1 }),
@@ -97,7 +98,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => fadeIn, void => fadeIn', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '0', transform: 'translate(0, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 1 }),
@@ -105,7 +106,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => fadeOut, void => fadeOut', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'translate(0, 0)', offset: 0 }),
 				style({ display: 'block', opacity: '0', transform: 'translate(0, 0)', offset: 1 }),
@@ -113,7 +114,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => wobble, void => wobble', [
-		animate('750ms ease-in-out',
+		animate(timing,//'750ms ease-in-out',
 			keyframes([
 				style({ transform: 'translate(-25%, 0) rotate( -5deg)', offset: .15 }),
 				style({ transform: 'translate(20%, 0) rotate( 3deg)', offset: .30 }),
@@ -125,7 +126,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => swing, void => swing', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ transform: 'translateX(15%)', offset: .2 }),
 				style({ transform: 'translateX(-10%)', offset: .4 }),
@@ -137,7 +138,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => accordionOpen', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ overflow: 'hidden', display: 'block', padding: '0', height: '0', offset: 0 }),
 				style({ overflow: 'hidden', display: 'block', padding: '*', height: '*', offset: 1 })
@@ -145,7 +146,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => accordionClose', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ overflow: 'hidden', display: 'block', padding: '*', height: '*', offset: 0 }),
 				style({ overflow: 'hidden', display: 'block', padding: '0', height: '0', offset: 1 })
@@ -153,7 +154,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => bounceInDown', [
-		animate('500ms ease-in-out',
+		animate(timing,//'500ms ease-in-out',
 			keyframes([
 				style({ opacity: '1', height: '0', overflow: 'hidden', padding: '0', transform: 'translate(0, 0)', offset: 0 }),
 				style({ opacity: '1', height: '*', overflow: 'hidden', padding: '*', transform: 'translate(0, 10px) ', offset: .3 }),
@@ -162,7 +163,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => turnInDown, void => turnInDown', [
-		animate('1400ms ease-in-out',
+		animate(timing,//'1400ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(60deg) translate(0, 1000%)', offset: 0  }),
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(0) translate(0,0)', offset: 1 })
@@ -170,7 +171,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => turnOutDown, void => turnOutDown', [
-		animate('1400ms ease-in-out',
+		animate(timing,//'1400ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(0) translate(0,0)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(60deg) translate(0, 1000%)', offset: 1  })
@@ -178,7 +179,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => turnInUp, void => turnInUp', [
-		animate('1400ms ease-in-out',
+		animate(timing,//'1400ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(-60deg) translate(0, -1000%)', offset: 0  }),
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(0) translate(0,0)', offset: 1 })
@@ -186,7 +187,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => turnOutUp, void => turnOutUp', [
-		animate('1400ms ease-in-out',
+		animate(timing,//'1400ms ease-in-out',
 			keyframes([
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(0) translate(0,0)', offset: 0 }),
 				style({ display: 'block', opacity: '1', transform: 'rotateZ(-60deg) translate(0, -1000%)', offset: 1  })
@@ -194,7 +195,7 @@ export const AnimateGallery = trigger("animateGallery", [
 		)
 	]),
 	transition('* => buzz', [
-		animate('1000ms ease-out',
+		animate(timing,//'1000ms ease-out',
 			keyframes([
 				style({ transform: 'translate(0, 0) 	 rotate( 0)', 		 	offset: 0 }),
 				style({ transform: 'translate(3px, 0)  rotate( 0.3deg)', 	offset: .1 }),

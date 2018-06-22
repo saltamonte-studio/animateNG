@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { StatesModel } from './demo.model';
-import { AnimateGallery } from '../animations/animations.component';
+import { AnimateNG } from '../animations/animate-ng';
 
 @Component({
 	selector: 'app-demo',
 	templateUrl: './demo.component.html',
 	styleUrls: ['./demo.component.scss'],
-	animations: [AnimateGallery]
+	animations: [AnimateNG(750)]
 })
 export class DemoComponent implements OnInit {
 
