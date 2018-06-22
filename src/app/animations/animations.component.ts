@@ -9,28 +9,6 @@ import {
 
 
 
-export namespace AnimationStates {
-	export const slideInLeft = "slideInLeft";
-	export const slideOutLeft = "slideOutLeft";
-	export const slideInRight = "slideInRight";
-	export const slideOutRight = "slideOutRight";
-	export const slideInUp = "slideInUp";
-	export const slideOutUp = "slideOutUp";
-	export const slideInDown = "slideInDown";
-	export const slideOutDown = "slideOutDown";
-	export const fadeIn = "fadeIn";
-	export const fadeOut = "fadeOut";
-	export const wobble = "wobble";
-	export const swing = "swing";
-	export const accordionClose = "accordionClose";
-	export const accordionOpen = "accordionOpen";
-	export const bounceInDown = "bounceInDown";
-	export const turnInDown = "turnInDown";
-	export const turnOutDown = "turnOutDown";
-	export const turnInUp = "turnInUp";
-	export const turnOutUp = "turnOutUp";
-	export const buzz = "buzz"; 
-}
 
 export const AnimateGallery = trigger("animateGallery", [
 	state("slideInLeft", style({ display: 'block', opacity: '1', transform: 'translate(0, 0)' })),
