@@ -1,5 +1,4 @@
 import {
-	trigger,
 	state,
 	style,
 	animate,
@@ -211,4 +210,4 @@ export const AnimateGallery =  (timing: string): AnimationMetadata[] => [
 			])
 		)
 	]),
-])
+]
