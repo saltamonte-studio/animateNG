@@ -1,6 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  height:auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+*{
+    box-sizing: border-box;
+}
+app-root,
+app-demo{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    height:auto;
+    justify-content: center;
 }
