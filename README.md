@@ -1,5 +1,9 @@
 # AnimateNG
 Animations for Angular projects. They are very easy to add and use in any project.
+
+## Demo
+https://saltamonte-studio.github.io/animateNG/
+
 ## How to use?
 
 `1` Add this file to your project. Contains a constant with all animations<br>
