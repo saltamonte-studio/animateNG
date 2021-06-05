@@ -15,7 +15,7 @@ export class DemoComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	state: string = 'turnInUp'//'fadeIn'
+	state: string = 'fadeIn'
 	selectedState: string = this.state
 	animationInProgress: boolean = false
 

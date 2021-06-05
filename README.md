@@ -1,27 +1,54 @@
 # AnimateNG
+Animations for Angular projects. They are very easy to add and use in any project.
+## How to use?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
+`1` Add this file to your project. Contains a constant with all animations<br>
+https://github.com/saltamonte-studio/animateNG/blob/master/src/app/animations/animations.component.ts
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`2` Import into the decorator of the component that you want to animate the constant `AnimateGallery`<br>
 
-## Code scaffolding
+```
+import { AnimateGallery } from '../animations/animations.component';
+@Component({
+	...
+	animations: [AnimateGallery]
+})
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+`3` Add animations to the template
+```
+<div [@animateGallery]="state">Elemento a animar</div>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Possible states
+### Fades
+ - fadeIn
+ - fadeOut
+### Slides
+ - slideInLeft
+ - slideOutLeft
+ - slideInRight
+ - slideOutRight
+ - slideInDown
+ - slideOutDown
+ - slideInUp
+ - slideOutUp
 
-## Running unit tests
+ - turnInDown
+ - turnOutDown
+ - turnInUp
+ - turnOutUp
+### Atention
+ - wobble
+ - swing
+ - buzz
+### Accordion
+ - accordionOpen
+ - accordionClose
+ - bounceInDown
+			
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

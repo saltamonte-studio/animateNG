@@ -3,18 +3,14 @@ $color: #f35626;
 .container {
     position: relative;
     top: 100%;
-    // min-height: 100%;
 
     .wrap {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
         color: #7b8993;
+        padding: 0 15px;
         a {
             color: inherit;
             text-decoration: underline;
@@ -27,7 +23,8 @@ $color: #f35626;
             height: 1px;
             background-color: $line;
             background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
-            width: 450px;
+            max-width: 450px;
+            width: 90vw;
         }
     }
 }
@@ -53,7 +50,7 @@ $color: #f35626;
 }
 
 .demoElement {
-    width: 50%;
+    width: 480px;
     margin: 0 auto;
     text-align: center;
     padding: 5px;
@@ -61,7 +58,9 @@ $color: #f35626;
     font-size: 5rem;
     line-height: 1.2;
     font-family: "Roboto", sans-serif;
-    font-weight: 100; //background: $line;
+    font-weight: 100;
+    border: 1px solid #f35626;
+    border-radius: 5px;
 }
 
 .form {
@@ -83,7 +82,7 @@ select {
         right: 16px;
         top: 22px;
         :before,
-		:after, 
+		:after 
     /* .arrow-up,
     .arrow-down */ {
             content: " ";
@@ -127,4 +126,14 @@ select {
     appearance: none;
     font: inherit;
     color: inherit;
+}
+
+@media screen and (max-width: 900px) {
+    .demoElement {
+        font-size: 3rem;
+        width: 290px;
+    }
+    .container-animation {
+        height: 80px;
+    }
 }
